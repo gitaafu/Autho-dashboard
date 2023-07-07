@@ -1,0 +1,8 @@
+<h2>Welcome to dashboard</h2>
+
+ 
+  <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+    <button (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
+      Log out
+    </button>
+  </ng-container>
